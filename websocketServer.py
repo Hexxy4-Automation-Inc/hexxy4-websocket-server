@@ -1,9 +1,12 @@
 import asyncio
 import websockets
 import json
+import logging
 
 HOST = ""
 PORT = 8001
+
+logging.getLogger("websockets").setLevel(logging.INFO)
 
 # WebSocket connection handler
 async def handler(websocket):
