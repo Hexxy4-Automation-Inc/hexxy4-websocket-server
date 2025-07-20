@@ -3,7 +3,7 @@ version: "3.9"
 services:
   websocket:
     build: .
-    container_name: websocket-server
+    container_name: hexxy4-websocket-server
     ports:
-      - "8765:8765"
+      - "8001:8001"
     restart: unless-stopped

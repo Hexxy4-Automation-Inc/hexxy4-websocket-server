@@ -12,7 +12,7 @@ COPY websocketServer.py .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose port
-EXPOSE 8765
+EXPOSE 8001
 
 # Run the app
 CMD ["python3", "websocketServer.py"]
