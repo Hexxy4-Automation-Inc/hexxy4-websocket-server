@@ -2,7 +2,7 @@ import asyncio
 import websockets
 import json
 
-HOST = 'localhost'
+HOST = '130.61.146.107'
 PORT = 8765
 
 # Template-based request handler
