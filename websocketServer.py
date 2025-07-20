@@ -8,13 +8,13 @@ PORT = 8001
 # WebSocket connection handler
 async def handler(websocket):
     print(f"Client connected: {websocket.remote_address}")
-    while True:
-        try:
+    try:
+        while True:
             message = await websocket.recv()
             print(f"Received: {message}")
             await websocket.send(message)
-        except websockets.ConnectionClosed:
-            print(f"Client disconnected: {websocket.remote_address}")
+    except websockets.ConnectionClosed:
+        print(f"Client disconnected: {websocket.remote_address}")
 
 # Run server
 async def main():
