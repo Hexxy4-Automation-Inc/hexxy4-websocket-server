@@ -40,4 +40,5 @@ async def main():
         await asyncio.Future()  # Run forever
 
 if __name__ == "__main__":
+    print("Starting websocket")
     asyncio.run(main())
