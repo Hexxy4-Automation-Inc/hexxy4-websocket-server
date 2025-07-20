@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8765
 
 # Run the app
-CMD ["python", "websocketServer.py"]
+CMD ["python3", "websocketServer.py"]
