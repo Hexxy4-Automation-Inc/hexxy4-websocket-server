@@ -67,9 +67,9 @@ ROUTES = {
 # Dispatcher
 async def handler(websocket):
     path = websocket.request.path
-    handler = ROUTES.get(path)
-    if handler:
-        await handler(websocket)
+    the_chosen_handler = ROUTES.get(path)
+    if the_chosen_handler:
+        await the_chosen_handler(websocket)
     else:
         print(f"No route for {path}, closing connection.")
         await websocket.close(code=1000, reason="Invalid path")
