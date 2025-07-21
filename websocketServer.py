@@ -65,7 +65,8 @@ ROUTES = {
 }
 
 # Dispatcher
-async def handler(websocket, path):
+async def handler(websocket):
+    path = websocket.request.path
     handler = ROUTES.get(path)
     if handler:
         await handler(websocket)
